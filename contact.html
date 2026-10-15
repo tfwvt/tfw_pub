@@ -3,10 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — tF Interactive</title>
-  <meta name="description" content="Start a project or say hello.">
+  <title>Contact — Triggerfish Interactive</title>
+  <meta name="description" content="Tell Triggerfish Interactive about your website, web app or interactive project. We reply within two working days.">
   <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#061418">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Triggerfish Interactive">
+  <meta property="og:description" content="Tell Triggerfish Interactive about your website, web app or interactive project. We reply within two working days.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('tf-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -14,10 +26,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">tF<span>Interactive</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
+      <a class="brand" href="index.html" aria-label="Triggerfish Interactive home">
+        <img class="brand-mark" src="img/favicon.svg" alt="" width="36" height="36">
+        <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
@@ -25,65 +37,167 @@
         <a href="about.html">About</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="btn btn-sm header-cta" href="contact.html">Start a project</a>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="page-hero">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Contact</span>
-          <h1>Let's make something.</h1>
-          <p class="lead">Tell us a little about the project and we'll get back to you within two working days.</p>
-          <ul class="list-plain">
-            <li><strong>Email</strong><br><a href="mailto:hello@example.com">hello@example.com</a></li>
-            <li><strong>Phone</strong><br><span class="muted">+1 (555) 000-0000</span></li>
-            <li><strong>Studio</strong><br><span class="muted">123 Example Street, City, Country</span></li>
-          </ul>
-        </div>
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Let’s talk about your project.</h1>
+        <p class="lead">A new site, a data-heavy app, a rescue job or an exhibit — tell us a little about it and we’ll get back to you within two working days.</p>
+      </div>
+    </section>
 
-        <form id="contact-form" class="form card" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
-            <span id="name-error" class="error" aria-live="polite"></span>
+    <section class="section" style="padding-top:0">
+      <div class="container split top">
+        <!-- Set data-endpoint to your form backend's URL (Formspree, Basin, etc.) to start receiving messages. -->
+        <form id="contact-form" class="form card reveal" novalidate data-endpoint="">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <span id="name-error" class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <span id="email-error" class="error" aria-live="polite"></span>
+            </div>
           </div>
           <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
-            <span id="email-error" class="error" aria-live="polite"></span>
+            <label for="company">Company or organization <span class="optional">(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization">
+          </div>
+          <fieldset class="field">
+            <legend>What can we help with?</legend>
+            <div class="chips">
+              <label><input type="checkbox" name="services" value="Website"><span>Website</span></label>
+              <label><input type="checkbox" name="services" value="WordPress"><span>WordPress</span></label>
+              <label><input type="checkbox" name="services" value="Web app / data viz"><span>Web app / data viz</span></label>
+              <label><input type="checkbox" name="services" value="Interactive exhibit"><span>Interactive exhibit</span></label>
+              <label><input type="checkbox" name="services" value="Care & hosting"><span>Care &amp; hosting</span></label>
+              <label><input type="checkbox" name="services" value="Something else"><span>Something else</span></label>
+            </div>
+          </fieldset>
+          <div class="form-row">
+            <div class="field">
+              <label for="budget">Budget range <span class="optional">(optional)</span></label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under $10k</option>
+                <option>$10k – $25k</option>
+                <option>$25k – $50k</option>
+                <option>$50k – $100k</option>
+                <option>$100k+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline">Timeline <span class="optional">(optional)</span></label>
+              <select id="timeline" name="timeline">
+                <option value="">Select a timeline</option>
+                <option>As soon as possible</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
           </div>
           <div class="field">
-            <label for="type">Project type</label>
-            <select id="type" name="type">
-              <option>Interactive web</option>
-              <option>Installation</option>
-              <option>Game</option>
-              <option>AR / VR</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+            <label for="message">Tell us about the project</label>
+            <textarea id="message" name="message" required aria-describedby="message-error" placeholder="Goals, audience, current site, deadlines — whatever’s useful."></textarea>
             <span id="message-error" class="error" aria-live="polite"></span>
           </div>
-          <button class="btn" type="submit">Send message</button>
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div>
+            <button class="btn" type="submit">Send message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
           <p class="form-status" role="status"></p>
         </form>
+
+        <aside class="contact-aside reveal">
+          <div class="card">
+            <h3>What happens next</h3>
+            <ol class="steps-mini">
+              <li><div><strong>We reply within two working days</strong>with a few questions or times for a call.</div></li>
+              <li><div><strong>A short discovery call</strong>to understand goals, audience and constraints.</div></li>
+              <li><div><strong>A written proposal</strong>with scope, timeline and a clear estimate.</div></li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Agencies &amp; exhibit builders</h3>
+            <p class="muted">Need a reliable development partner for your clients? We’re happy to work white-label alongside your designers and project managers.</p>
+          </div>
+          <div class="card">
+            <h3>Based in Vermont</h3>
+            <p class="muted">Working with clients across the US — from New York and Pennsylvania to Texas.</p>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
+
+  
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; <span data-year>2026</span> tF Interactive. All rights reserved.</span>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Triggerfish Interactive home">
+            <img class="brand-mark" src="img/favicon.svg" alt="" width="36" height="36">
+            <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+          </a>
+          <p>Websites, web apps and interactive experiences for publishers, museums and growing companies. Vermont-based, working everywhere.</p>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Case studies</h4>
+          <ul>
+            <li><a href="work/270towin.html">270toWin</a></li>
+            <li><a href="work/ecaring.html">eCaring</a></li>
+            <li><a href="work.html#kidtropolis">Kidtropolis</a></li>
+            <li><a href="work.html#energy-lab">Energy Lab</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#web-apps">Web apps &amp; data viz</a></li>
+            <li><a href="services.html#websites">Websites &amp; WordPress</a></li>
+            <li><a href="services.html#exhibits">Interactive exhibits</a></li>
+            <li><a href="services.html#care">Care &amp; hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Triggerfish Interactive. All rights reserved.</span>
+        <span>Hand-built, no templates.</span>
+      </div>
     </div>
   </footer>
 </body>
