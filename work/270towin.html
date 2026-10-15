@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>270toWin case study — Triggerfish Interactive</title>
+  <meta name="description" content="How Triggerfish brought live Kalshi prediction-market data, interactive Senate, House and Governor maps and polling dashboards to 270toWin.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#061418">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="270toWin case study — Triggerfish Interactive">
+  <meta property="og:description" content="How Triggerfish brought live Kalshi prediction-market data, interactive Senate, House and Governor maps and polling dashboards to 270toWin.">
+  <meta property="og:image" content="../img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>try{var t=localStorage.getItem('tf-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Triggerfish Interactive home">
+        <img class="brand-mark" src="../img/favicon.svg" alt="" width="36" height="36">
+        <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../work.html" aria-current="page">Work</a>
+        <a href="../services.html">Services</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="btn btn-sm header-cta" href="../contact.html">Start a project</a>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../work.html">Work</a><span aria-hidden="true">/</span><span>270toWin</span></nav>
+        <span class="eyebrow">Case study · 270toWin</span>
+        <h1>Election maps that move with the market.</h1>
+        <p class="lead">270toWin is one of the web’s go-to places to build your own electoral map. For the 2026 midterm cycle we helped bring live prediction-market data from Kalshi into the site, alongside the interactive maps and polling tools readers rely on.</p>
+        <dl class="case-meta">
+          <div><dt>Client</dt><dd>270toWin</dd></div>
+          <div><dt>Partner data</dt><dd>Kalshi prediction markets</dd></div>
+          <div><dt>Services</dt><dd>Front-end development, data visualization, API integration</dd></div>
+          <div><dt>Timeline</dt><dd>Ongoing, 2016 – present</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <figure class="case-hero-img reveal">
+          <img src="../img/work/270-treemap-overview.webp" alt="270toWin 2028 presidential election prediction markets page with live treemaps" width="1326" height="1150">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split top">
+        <div class="reveal">
+          <span class="eyebrow">The challenge</span>
+          <h2>Make fast-moving numbers easy to read.</h2>
+        </div>
+        <div class="reveal">
+          <p class="lead mt-0">Election readers want two things at once: the big picture and the detail behind it. Prediction markets add a third layer — prices that change minute to minute.</p>
+          <p class="muted">The goal was to present that data clearly and responsibly, in 270toWin’s familiar style, without slowing down pages that see heavy traffic around every election. Each visual needed to work on a phone, update on its own, and sit comfortably next to the maps and polling averages readers already know.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we built</span>
+          <h2>Four new ways to read an election.</h2>
+        </div>
+
+        <div class="case-block">
+          <div class="reveal">
+            <h3>Live candidate treemaps</h3>
+            <p>Each candidate’s tile is sized by the probability implied by Kalshi’s latest trading price, so the frontrunners literally take up more space. Treemaps for the 2028 presidential winner and both parties’ nominees can run side by side — three live visuals on one page, each updating independently.</p>
+            <ul class="checklist">
+              <li>Probability-weighted layouts with candidate photos</li>
+              <li>Party-colored tiles and clear percentage labels</li>
+              <li>Combined “everyone else” bucket keeps small fields readable</li>
+            </ul>
+          </div>
+          <div class="case-block-media two reveal">
+            <figure class="shot"><img src="../img/work/270-treemap-dem.webp" alt="Democratic nominee prediction market treemap" width="982" height="1125" loading="lazy"><figcaption>Democratic nominee market</figcaption></figure>
+            <figure class="shot"><img src="../img/work/270-treemaps-live.webp" alt="Three live treemaps on the same page" width="642" height="1228" loading="lazy"><figcaption>Three live treemaps on one page</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="case-block flip">
+          <div class="reveal">
+            <h3>Senate, House &amp; Governor maps</h3>
+            <p>The interactive maps now show where the market thinks each chamber is heading. Readers can switch between the current Congress, a consensus forecast and the market view, then build and share their own forecast.</p>
+            <ul class="checklist">
+              <li>Market odds for chamber control alongside the map</li>
+              <li>Custom map color palettes and a map library</li>
+              <li>One-click share and embed for social and publishers</li>
+            </ul>
+          </div>
+          <div class="case-block-media two reveal">
+            <figure class="shot"><img src="../img/work/270-senate-map.webp" alt="2026 Senate interactive map with Kalshi control odds" width="1006" height="1104" loading="lazy"><figcaption>2026 Senate interactive map</figcaption></figure>
+            <figure class="shot"><img src="../img/work/270-map-tools.webp" alt="Map palette, share and embed tools and incumbent table" width="1007" height="1200" loading="lazy"><figcaption>Map tools, sharing &amp; incumbents</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="case-block">
+          <div class="reveal">
+            <h3>Polling at a glance</h3>
+            <p>Polling averages for every state render as a sortable grid of pie charts, with the leader and margin called out beneath each. Race pages pair the current market odds with a full table of polls, so readers can compare the money with the surveys.</p>
+            <ul class="checklist">
+              <li>Sort by date, state, competitiveness or margin</li>
+              <li>Per-race poll tables with averages highlighted</li>
+              <li>Market odds embedded directly on race pages</li>
+            </ul>
+          </div>
+          <div class="case-block-media two reveal">
+            <figure class="shot"><img src="../img/work/270-polls.webp" alt="State polling averages displayed as pie charts" width="1003" height="1197" loading="lazy"><figcaption>Presidential polling averages</figcaption></figure>
+            <figure class="shot"><img src="../img/work/270-race-polls.webp" alt="Michigan Senate race page with market odds and polls" width="976" height="997" loading="lazy"><figcaption>Race page: Michigan Senate</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="case-block flip">
+          <div class="reveal">
+            <h3>Odds-spread analysis</h3>
+            <p>A dumbbell chart lines up each competitive House district and shows the gap between Kalshi’s price and an independent forecaster’s rating. The biggest disagreements jump straight out — exactly the kind of story a table hides.</p>
+          </div>
+          <div class="case-block-media reveal">
+            <figure class="shot"><img src="../img/work/270-dumbbell.webp" alt="Dumbbell chart comparing Kalshi odds with forecaster ratings by district" width="808" height="872" loading="lazy"><figcaption>Kalshi vs. forecaster ratings by district</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <span class="eyebrow">More from the build</span>
+            <h2>Across the whole site.</h2>
+          </div>
+        </div>
+        <div class="grid grid-3" data-stagger>
+          <figure class="shot crop reveal"><img src="../img/work/270-president-markets-card.webp" data-full="../img/work/270-president-markets.webp" alt="Presidential nominee markets for both parties" width="720" height="540" loading="lazy"><figcaption>Nominee markets for both parties</figcaption></figure>
+          <figure class="shot crop reveal"><img src="../img/work/270-house-map.webp" alt="2026 House election interactive map" width="1008" height="1178" loading="lazy"><figcaption>2026 House interactive map</figcaption></figure>
+          <figure class="shot crop reveal"><img src="../img/work/270-governor-map.webp" alt="2026 Governor elections map" width="1007" height="1161" loading="lazy"><figcaption>2026 Governor elections map</figcaption></figure>
+          <figure class="shot crop reveal"><img src="../img/work/270-kalshi-intro.webp" alt="Prediction markets introduction with Kalshi partnership note" width="1005" height="495" loading="lazy"><figcaption>Clear sourcing and timestamps</figcaption></figure>
+          <figure class="shot crop reveal"><img src="../img/work/270-treemap-rep.webp" alt="Republican nominee market treemap" width="982" height="1122" loading="lazy"><figcaption>Republican nominee market</figcaption></figure>
+          <figure class="shot crop reveal"><img src="../img/work/270-map-2016.webp" alt="The classic 270toWin interactive electoral map" width="976" height="1033" loading="lazy"><figcaption>Where it started: the classic map</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">The result</span>
+          <h2>Richer election coverage, same familiar site.</h2>
+        </div>
+        <div class="reveal">
+          <ul class="checklist mt-0">
+            <li>Prediction-market data presented next to polls and forecasts, with clear sourcing and timestamps</li>
+            <li>New visual formats — treemaps and dumbbell charts — that work on phones as well as desktops</li>
+            <li>Market odds integrated across President, Senate, House and Governor content</li>
+            <li>A long-running partnership that has grown with the site since its classic interactive map</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <a class="next-case reveal" href="../work/ecaring.html">
+          <span><small>Next case study</small><strong>eCaring — website, CMS &amp; help portal</strong></span>
+          <span class="btn">View
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+        <div class="cta-band reveal mt-3">
+          <h2>Got data that deserves a better interface?</h2>
+          <p>We turn complex, fast-moving information into tools people enjoy using.</p>
+          <div class="btn-row">
+            <a class="btn" href="../contact.html">Start a project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <dialog id="zoom-dialog" class="zoom-dialog" aria-label="Full-size image">
+    <div class="zoom-scroll"><img src="data:," alt=""></div>
+    <button class="icon-btn dialog-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="../index.html" aria-label="Triggerfish Interactive home">
+            <img class="brand-mark" src="../img/favicon.svg" alt="" width="36" height="36">
+            <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+          </a>
+          <p>Websites, web apps and interactive experiences for publishers, museums and growing companies. Vermont-based, working everywhere.</p>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="../work.html">Work</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Case studies</h4>
+          <ul>
+            <li><a href="../work/270towin.html">270toWin</a></li>
+            <li><a href="../work/ecaring.html">eCaring</a></li>
+            <li><a href="../work.html#kidtropolis">Kidtropolis</a></li>
+            <li><a href="../work.html#energy-lab">Energy Lab</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../services.html#web-apps">Web apps &amp; data viz</a></li>
+            <li><a href="../services.html#websites">Websites &amp; WordPress</a></li>
+            <li><a href="../services.html#exhibits">Interactive exhibits</a></li>
+            <li><a href="../services.html#care">Care &amp; hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Triggerfish Interactive. All rights reserved.</span>
+        <span>Hand-built, no templates.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

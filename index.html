@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home — tF Interactive</title>
-  <meta name="description" content="An interactive media studio building web, installation and game experiences.">
+  <title>Triggerfish Interactive — Web development & interactive studio</title>
+  <meta name="description" content="Triggerfish Interactive builds websites, web applications, data visualizations and interactive exhibits. Trusted by 270toWin, eCaring, the Children's Museum of Houston and more since 1999.">
   <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#061418">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triggerfish Interactive — Web development & interactive studio">
+  <meta property="og:description" content="Websites, web apps, data visualization and interactive exhibits. Building for the web since 1999.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('tf-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="js/projects.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -14,10 +27,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">tF<span>Interactive</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
+      <a class="brand" href="index.html" aria-label="Triggerfish Interactive home">
+        <img class="brand-mark" src="img/favicon.svg" alt="" width="36" height="36">
+        <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+      </a>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
         <a href="work.html">Work</a>
@@ -25,102 +38,367 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="btn btn-sm header-cta" href="contact.html">Start a project</a>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
+    <!-- Hero -->
     <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Interactive media studio</span>
-        <h1>We build experiences people <em>play with</em>.</h1>
-        <p class="lead">tF Interactive designs and engineers interactive web, installations and games for brands, museums and curious humans.</p>
-        <div class="btn-row">
-          <a class="btn" href="work.html">See our work</a>
-          <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge"><b>NEW</b> Live prediction-market maps for 270toWin</span>
+          <h1>Websites and web apps that <span class="text-gradient">people use</span>.</h1>
+          <p class="lead">Triggerfish Interactive designs and builds data-rich web applications, content-managed websites and hands-on interactive experiences. Small senior team, big-league clients, building for the web since 1999.</p>
+          <div class="btn-row">
+            <a class="btn" href="work.html">See our work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="contact.html">Talk about a project</a>
+          </div>
+          <ul class="hero-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Custom web apps</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>WordPress &amp; CMS</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Data visualization</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Interactive exhibits</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Examples of our work: a 270toWin prediction-market page, an Energy Lab touch table and the eCaring website">
+          <figure class="screen screen-main" data-depth="10">
+            <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i><span>270towin.com</span></div>
+            <img src="img/work/270-senate-map.webp" alt="270toWin 2026 Senate interactive map with Kalshi prediction-market odds" width="1006" height="1104">
+          </figure>
+          <figure class="screen screen-photo" data-depth="22">
+            <img src="img/work/energylab-crowd-card.webp" alt="Students gathered around an Energy Lab touch table" width="720" height="540">
+          </figure>
+          <figure class="screen screen-app" data-depth="34">
+            <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i><span>ecaring.com</span></div>
+            <img src="img/work/ecaring-home-card.webp" alt="eCaring website homepage" width="720" height="540">
+          </figure>
+          <span class="hero-chip c1"><span class="dot live"></span>Live market data</span>
+          <span class="hero-chip c2">Touch-table exhibits</span>
+          <span class="hero-chip c3">WordPress CMS</span>
         </div>
       </div>
     </section>
 
+    <!-- Clients -->
+    <section class="clients" aria-label="Clients and collaborators">
+      <div class="container">
+        <p>Trusted by publishers, museums &amp; growing companies</p>
+        <ul class="client-list">
+          <li>270toWin</li>
+          <li>eCaring</li>
+          <li>Children’s Museum of Houston</li>
+          <li>National Guard</li>
+          <li>Intrepid Museum</li>
+          <li>Bicycling</li>
+          <li>Vermont Public Radio</li>
+          <li>National Cowgirl Museum</li>
+          <li>MyRatePlan</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
     <section class="section">
       <div class="container">
-        <span class="eyebrow">What we do</span>
-        <h2>Design and code, under one roof.</h2>
-        <div class="grid">
-          <article class="card reveal">
-            <span class="num">01</span>
-            <h3>Interactive web</h3>
-            <p class="muted">Immersive sites, WebGL and real-time 3D that run well on every device.</p>
-          </article>
-          <article class="card reveal">
-            <span class="num">02</span>
-            <h3>Installations</h3>
-            <p class="muted">Physical spaces that respond to people: sensors, projection, light and sound.</p>
-          </article>
-          <article class="card reveal">
-            <span class="num">03</span>
-            <h3>Games &amp; play</h3>
-            <p class="muted">Small, sharp games for browsers and phones that people actually finish.</p>
-          </article>
+        <div class="section-head-row">
+          <div class="section-head">
+            <span class="eyebrow">What we do</span>
+            <h2>Strategy, design and engineering under one roof.</h2>
+          </div>
+          <a class="link-arrow" href="services.html">All services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="services.html">All services</a>
+        <div class="grid grid-4" data-stagger>
+          <article class="card service-card reveal">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+            <h3>Web apps &amp; data viz</h3>
+            <p>Interactive maps, dashboards and tools that turn live data into something people can explore.</p>
+            <ul class="tags"><li>JavaScript</li><li>APIs</li><li>SVG &amp; canvas</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h5"/></svg></span>
+            <h3>Websites &amp; WordPress</h3>
+            <p>Fast, accessible sites on a CMS your team can actually run — custom block themes, not templates.</p>
+            <ul class="tags"><li>WordPress</li><li>Gutenberg</li><li>ACF</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="icon-tile lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V6a2 2 0 1 1 4 0v5"/><path d="M13 9.5a2 2 0 1 1 4 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5-2.7L3 16a2 2 0 0 1 3.2-2.3L9 16"/></svg></span>
+            <h3>Interactive exhibits</h3>
+            <p>Touch tables, kiosks, RFID and motion games for museums and brand experiences — hardware included.</p>
+            <ul class="tags"><li>Kiosks</li><li>Sensors</li><li>Networked CMS</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="icon-tile lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3>Care, hosting &amp; IT</h3>
+            <p>Updates, monitoring, analytics and Google Workspace admin, so your site keeps working after launch.</p>
+            <ul class="tags"><li>Maintenance</li><li>Analytics</li><li>Workspace</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Featured case study -->
+    <section class="section section-alt">
+      <div class="container feature">
+        <div class="feature-copy reveal">
+          <span class="eyebrow">Featured case study · 270toWin</span>
+          <h2>Election maps that move with the market.</h2>
+          <p class="lead">For the 2026 cycle we brought real-time prediction-market data from Kalshi onto 270toWin — alongside the interactive maps and polling tools its readers rely on.</p>
+          <ul class="feature-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              <div><strong>Live candidate treemaps</strong><span>Three independent, auto-updating market visuals on a single page.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              <div><strong>Senate, House &amp; Governor maps</strong><span>Consensus forecasts and market odds layered onto every race.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              <div><strong>Polling dashboards</strong><span>State-by-state averages, race pages and odds-spread charts.</span></div>
+            </li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="work/270towin.html">Read the case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="feature-media reveal">
+          <figure class="fm-a"><img src="img/work/270-president-markets-card.webp" alt="2028 presidential nominee prediction markets on 270toWin" width="720" height="540" loading="lazy"></figure>
+          <figure class="fm-b"><img src="img/work/270-polls-card.webp" alt="270toWin state polling averages" width="720" height="540" loading="lazy"></figure>
+          <figure class="fm-c"><img src="img/work/270-dumbbell-card.webp" alt="Odds spread chart comparing Kalshi prices to forecaster ratings" width="720" height="540" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected work -->
     <section class="section">
       <div class="container">
-        <span class="eyebrow">Selected work</span>
-        <h2>Recent projects.</h2>
-        <div class="grid">
-          <a class="project reveal" href="#" data-category="web">
-            <div class="project-thumb" style="--c1: #4f46e5; --c2: #7cf5c4"></div>
-            <div class="project-body">
-              <h3>Project One</h3>
-              <p>Interactive web experience</p>
-            </div>
-          </a>
-          <a class="project reveal" href="#" data-category="installation">
-            <div class="project-thumb" style="--c1: #f0616d; --c2: #f7b955"></div>
-            <div class="project-body">
-              <h3>Project Two</h3>
-              <p>Museum installation</p>
-            </div>
-          </a>
-          <a class="project reveal" href="#" data-category="games">
-            <div class="project-thumb" style="--c1: #0ea5e9; --c2: #a78bfa"></div>
-            <div class="project-body">
-              <h3>Project Three</h3>
-              <p>Browser game</p>
-            </div>
+        <div class="section-head-row">
+          <div class="section-head">
+            <span class="eyebrow">Selected work</span>
+            <h2>From browser tabs to museum floors.</h2>
+          </div>
+          <a class="link-arrow" href="work.html">View all projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="work.html">View all work</a>
+        <div class="grid grid-3" data-stagger>
+          <a class="project reveal" href="work.html#ecaring" data-project="ecaring">
+            <div class="project-thumb"><img src="img/work/ecaring-site-card.webp" alt="" width="720" height="540" loading="lazy"><span class="badge case">Case study</span></div>
+            <div class="project-body">
+              <span class="client">eCaring</span>
+              <h3>Website, CMS &amp; help portal</h3>
+              <p>A complete digital presence for a home-healthcare platform.</p>
+              <ul class="tags"><li>WordPress</li><li>IA &amp; UX</li></ul>
+            </div>
+          </a>
+          <a class="project reveal" href="work.html#kidtropolis" data-project="kidtropolis">
+            <div class="project-thumb"><img src="img/work/kidtropolis-atm-card.webp" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="project-body">
+              <span class="client">Children’s Museum of Houston</span>
+              <h3>Kidtropolis banking system</h3>
+              <p>ATMs and accounts across 42 networked exhibit computers.</p>
+              <ul class="tags"><li>Networked exhibits</li><li>CMS</li></ul>
+            </div>
+          </a>
+          <a class="project reveal" href="work.html#energy-lab" data-project="energy-lab">
+            <div class="project-thumb"><img src="img/work/energylab-crowd-card.webp" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="project-body">
+              <span class="client">National Guard</span>
+              <h3>Energy Lab touring exhibit</h3>
+              <p>Touch tables and custom interactives that travel in a truck.</p>
+              <ul class="tags"><li>Touch tables</li><li>Hardware</li></ul>
+            </div>
+          </a>
+          <a class="project reveal" href="work.html#myrateplan" data-project="myrateplan">
+            <div class="project-thumb"><img src="img/work/myrateplan-finder-card.webp" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="project-body">
+              <span class="client">MyRatePlan</span>
+              <h3>MyPhoneFinder</h3>
+              <p>Real-time filtering across a wall of every available phone.</p>
+              <ul class="tags"><li>Interactive app</li><li>Filtering</li></ul>
+            </div>
+          </a>
+          <a class="project reveal" href="work.html#phoebetv" data-project="phoebetv">
+            <div class="project-thumb"><img src="img/work/phoebetv-home-card.webp" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="project-body">
+              <span class="client">PhoebeTV</span>
+              <h3>Video entertainment network</h3>
+              <p>Show pages, episode players and editorial rails for original series.</p>
+              <ul class="tags"><li>Video</li><li>Web design</li></ul>
+            </div>
+          </a>
+          <a class="project reveal" href="work.html#train-signs" data-project="train-signs">
+            <div class="project-thumb"><img src="img/work/train-signs-1-card.webp" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="project-body">
+              <span class="client">Advanced Animations</span>
+              <h3>Train Signs motion game</h3>
+              <p>Full-body, camera-tracked gameplay for rail-safety education.</p>
+              <ul class="tags"><li>Motion tracking</li><li>Game</li></ul>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section cta">
-      <div class="container reveal">
-        <h2>Have something in mind?</h2>
-        <p class="lead">Tell us what you're building. We'll reply within two working days.</p>
-        <div class="btn-row">
-          <a class="btn" href="contact.html">Start a project</a>
+    <!-- Stats -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat"><strong class="text-gradient">1999</strong><span>Building for the web since the dial-up days</span></div>
+          <div class="stat"><strong>4</strong><span>Live election map types on 270toWin: President, Senate, House, Governor</span></div>
+          <div class="stat"><strong>42</strong><span>Networked computers running a single museum installation</span></div>
+          <div class="stat"><strong>6,000</strong><span>Square feet of interactive city in Kidtropolis</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hardware to HTML -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">How we’re different</span>
+          <h2>From circuit boards to content management.</h2>
+          <p class="lead">Most web shops stop at the browser. We’ve wired RFID readers into steel-mill exhibits, built touch tables that tour the country, and then written the CMS that keeps it all up to date.</p>
+          <p class="muted">That end-to-end experience makes us calm in complicated projects: messy data, third-party APIs, legacy systems or physical hardware. You get one accountable team from the first sketch to long after launch.</p>
+          <ul class="checklist">
+            <li>Senior people on every project — no hand-offs to juniors</li>
+            <li>Plain-English updates and honest estimates</li>
+            <li>Code and content you own outright</li>
+          </ul>
+        </div>
+        <div class="mosaic reveal" aria-label="Behind the scenes">
+          <figure class="m1"><img src="img/work/lab-boards-card.webp" alt="Custom input/output boards wired during an exhibit install" width="720" height="540" loading="lazy"><figcaption>Custom I/O boards, Johnstown</figcaption></figure>
+          <figure class="m2"><img src="img/work/energylab-console-card.webp" alt="Students using a hands-on control console" width="720" height="540" loading="lazy"><figcaption>Energy Lab console</figcaption></figure>
+          <figure class="m3"><img src="img/work/lab-circuit-card.webp" alt="A custom controller circuit board" width="720" height="540" loading="lazy"></figure>
+          <figure class="m4"><img src="img/work/jaha-mold-card.webp" alt="An RFID-tagged mold" width="720" height="540" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">How we work</span>
+          <h2>A clear path from idea to launch.</h2>
+          <p class="lead">Every engagement follows the same simple rhythm, sized to your project.</p>
+        </div>
+        <ol class="process" data-stagger>
+          <li class="reveal"><h3>Discover</h3><p>We learn your audience, goals and constraints, then agree on scope, budget and what success looks like.</p></li>
+          <li class="reveal"><h3>Design</h3><p>Sitemaps, wireframes and visual design you can click through — before a line of production code.</p></li>
+          <li class="reveal"><h3>Build</h3><p>Clean, tested code shipped in short cycles to a staging site, so you see progress every week.</p></li>
+          <li class="reveal"><h3>Launch &amp; care</h3><p>Smooth launch, training for your team, then hosting, updates and improvements as you grow.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Have a project in mind?</h2>
+          <p>Whether it’s a new website, a data-heavy web app or something people can touch, we’d love to hear about it. We reply within two working days.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html">Start a project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="work.html">Browse the portfolio</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Project dialog -->
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-media">
+        <div class="dialog-stage">
+          <img src="data:," alt="">
+          <button class="icon-btn stage-nav prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="icon-btn stage-nav next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <p class="dialog-caption" aria-live="polite"></p>
+        <div class="dialog-thumbs"></div>
+      </div>
+      <div class="dialog-body">
+        <button class="icon-btn dialog-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <span class="client"></span>
+        <h2 id="project-dialog-title"></h2>
+        <div class="dialog-text"></div>
+        <dl class="dialog-meta"></dl>
+        <ul class="highlights"></ul>
+        <ul class="tags dialog-tags"></ul>
+        <div class="btn-row">
+          <a class="btn dialog-case" href="#">Read the full case study
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="contact.html">Start a similar project</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; <span data-year>2026</span> tF Interactive. All rights reserved.</span>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Triggerfish Interactive home">
+            <img class="brand-mark" src="img/favicon.svg" alt="" width="36" height="36">
+            <span class="brand-text"><span class="brand-name">Triggerfish</span><span class="brand-sub">Interactive</span></span>
+          </a>
+          <p>Websites, web apps and interactive experiences for publishers, museums and growing companies. Vermont-based, working everywhere.</p>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Case studies</h4>
+          <ul>
+            <li><a href="work/270towin.html">270toWin</a></li>
+            <li><a href="work/ecaring.html">eCaring</a></li>
+            <li><a href="work.html#kidtropolis">Kidtropolis</a></li>
+            <li><a href="work.html#energy-lab">Energy Lab</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#web-apps">Web apps &amp; data viz</a></li>
+            <li><a href="services.html#websites">Websites &amp; WordPress</a></li>
+            <li><a href="services.html#exhibits">Interactive exhibits</a></li>
+            <li><a href="services.html#care">Care &amp; hosting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Triggerfish Interactive. All rights reserved.</span>
+        <span>Hand-built, no templates.</span>
+      </div>
     </div>
   </footer>
 </body>
