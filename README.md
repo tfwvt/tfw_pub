@@ -22,12 +22,13 @@ Promotional website for **Triggerfish Interactive**: a static, multi-page portfo
 - `img/work/`: optimized WebP images. `*-card.webp` files are 720×540 crops used on cards.
 - `img/favicon.svg`: the Triggerfish "T" mark, redrawn as SVG; also used as the header logo
 - `img/og-image.png`: 1200×630 social share image
+- `form-handler/`: Django contact form handler (runs on a Python host, not GitHub Pages)
 
 ## Editing
 
 - **Add or change a project:** edit its entry in `js/projects.js`. On `work.html`, also add or update the matching card (`<a class="project" data-project="slug" data-category="web|sites|exhibits|media">`). The filter counts update automatically.
 - **Theme:** colors are CSS custom properties at the top of `css/styles.css`. Dark is the default; light follows the visitor's system setting, and the header button lets visitors choose.
-- **Contact form:** the form validates in the browser but sends nothing until you connect it. Set `data-endpoint` on `#contact-form` in `contact.html` to a form backend that accepts JSON POSTs (for example Formspree or Basin). Fields: `name`, `email`, `company`, `services`, `budget`, `timeline` and `message`. A hidden `website` field catches spam bots.
+- **Contact form:** the form validates in the browser and posts JSON to the URL in `data-endpoint` on `#contact-form` in `contact.html`. Until that's set, nothing is sent. The `form-handler/` folder has a Django app that receives the form and emails it to tfishapps@gmail.com. Deploy it, then set `data-endpoint` to its `/contact/` URL (see `form-handler/README.md`). Fields: `name`, `email`, `company`, `services`, `budget`, `timeline` and `message`. A hidden `website` field catches spam bots.
 - **Social image:** `og:image` uses a relative path. Some social networks need an absolute URL, so change it to the full URL once the site has its final domain.
 
 ## Preview
